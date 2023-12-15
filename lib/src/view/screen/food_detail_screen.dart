@@ -5,7 +5,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:restruant_app/core/app_extension.dart';
 
 import '../../../core/app_color.dart';
-import '../../../core/app_icon.dart';
 import '../../controller/food_controller.dart';
 import '../../model/food.dart';
 import '../widget/counter_button.dart';
@@ -48,8 +47,13 @@ class FoodDetailScreen extends StatelessWidget {
       backgroundColor: LightThemeColor.accent,
       onPressed: onPressed,
       child: food.isFavorite
-          ? const Icon(AppIcon.heart)
-          : const Icon(AppIcon.outlinedHeart),
+          ? const Icon(
+              Icons.favorite,
+              color: Colors.black,
+            )
+          : const Icon(
+              Icons.favorite_outline,
+            ),
     );
   }
 

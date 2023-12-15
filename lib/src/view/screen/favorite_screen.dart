@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:restruant_app/core/app_extension.dart';
 
 import '../../../core/app_color.dart';
-import '../../../core/app_icon.dart';
 import '../../controller/food_controller.dart';
 import '../../model/food.dart';
 import '../widget/empty_widget.dart';
@@ -49,7 +48,7 @@ class FavoriteScreen extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),
-                trailing: const Icon(AppIcon.heart, color: Colors.redAccent),
+                trailing: const Icon(Icons.favorite, color: Colors.redAccent),
               ),
             ).fadeAnimation(index * 0.6);
           },

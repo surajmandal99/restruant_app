@@ -12,6 +12,10 @@ import '../widget/empty_widget.dart';
 final FoodController controller = Get.put(FoodController());
 
 class CartScreen extends StatelessWidget {
+  //snackbar msg
+  static const snackBar = SnackBar(
+    content: Text('Payment isnt avilable yet !'),
+  );
   const CartScreen({super.key});
 
   PreferredSizeWidget _appBar(BuildContext context) {
@@ -107,8 +111,10 @@ class CartScreen extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: width * 0.1),
                       child: ElevatedButton(
-                        onPressed: () {},
-                        child: const Text("Checkout"),
+                        onPressed: () {
+                          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                        },
+                        child: const Text("Pay"),
                       ),
                     ),
                   )

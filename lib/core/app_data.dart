@@ -4,7 +4,6 @@ import '../src/model/bottom_navigation_item.dart';
 import '../src/model/food.dart';
 import '../src/model/food_category.dart';
 import 'app_asset.dart';
-import 'app_icon.dart';
 
 class AppData {
   const AppData._();
@@ -168,8 +167,8 @@ class AppData {
       'Shopping cart',
     ),
     BottomNavigationItem(
-      const Icon(AppIcon.outlinedHeart),
-      const Icon(AppIcon.heart),
+      const Icon(Icons.favorite_border),
+      const Icon(Icons.favorite),
       'Favorite',
     ),
     BottomNavigationItem(
